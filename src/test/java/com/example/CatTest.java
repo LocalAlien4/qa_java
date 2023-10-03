@@ -14,10 +14,9 @@ import java.util.List;
 import static org.junit.Assert.*;
 @RunWith(MockitoJUnitRunner.class)
 
-
 public class CatTest {
     @Mock
-    Feline feline= new Feline();
+    Feline feline; //= new Feline();
     public Cat cat;
 
     @Before
@@ -26,12 +25,12 @@ public class CatTest {
     }
 
     @Test
-    public void getSoundPositive() {
+    public void getSoundMeow() {
         assertEquals("Мяу", cat.getSound());
     }
 
     @Test
-    public void getFoodMeat() throws Exception {
+    public void checkThatFoodIsMeat() throws Exception {
        Mockito.when(feline.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
        assertEquals(List.of("Животные", "Птицы", "Рыба"),cat.getFood());
     }
