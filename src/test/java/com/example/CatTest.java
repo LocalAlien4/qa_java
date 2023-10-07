@@ -16,7 +16,7 @@ import static org.junit.Assert.*;
 
 public class CatTest {
     @Mock
-    Feline feline; //= new Feline();
+    Feline feline;
     public Cat cat;
 
     @Before
